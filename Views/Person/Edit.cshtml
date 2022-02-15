@@ -1,0 +1,46 @@
+@model MVC2.Models.Person
+
+@{
+    ViewData["Title"] = "Sửa thông tin";
+}
+
+<p class="h3">You're editing:</p>
+
+<form asp-action="Edit">
+    <div>
+    <h1 class="display-4 text-center">Edit Member</h1>
+        <div class="form-group">
+            <label for="FirtName">First Name: </label> 
+            <input type="text" class="form-control" id="FirtName" name="FirtName" />
+           
+        </div>
+
+        <div class="form-group">
+            <label for="LastName">Last Name: </label>
+            
+            <input type="text" class="form-control" id="LastName" name="LastName" />
+        </div>
+
+        <div class="form-group">
+            <label for="Gender">Gender: </label>
+            <select class="form-control" name="Gender" id="Gender">
+                <option value="None" selected>Please select a gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="birthPlace">City: </label>
+            <input type="text" class="form-control" id="City" name="City" />
+        </div>
+
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-sm btn-outline-primary" /> |
+        <a asp-action="Index" class="btn btn-sm btn-outline-secondary">Back to List</a>
+    </div>
+</form>
+
+@section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
