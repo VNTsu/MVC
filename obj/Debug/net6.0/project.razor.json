@@ -16328,11 +16328,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "e:\\Code Rookie\\MVC2\\Views\\Person\\Comfirm.cshtml",
-      "TargetPath": "Views\\Person\\Comfirm.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "e:\\Code Rookie\\MVC2\\Views\\Person\\Index.cshtml",
       "TargetPath": "Views\\Person\\Index.cshtml",
       "FileKind": "mvc"

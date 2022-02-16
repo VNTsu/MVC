@@ -1,4 +1,4 @@
-@model IEnumerable<MVC2.Models.Person>
+@model MVC2.Models.Person
 
 @{
     ViewData["Title"] = "Xóa thông tin";
@@ -6,10 +6,16 @@
 <form asp-action="Delete">
 <h1>Bạn có muốn xóa không</h1>
 <div>
-    <input class="Back-btn" type="submit" value="Yes" />
+    <input class="Back-btn" type="submit" value="Yes" id="btn" />
     <a asp-action="Index" class="Back-btn">Cancel</a>
 </div>
 </form>
+<script>
+         var submit = document.getElementById("btn");
+            submit.onclick = function(){
+             alert("Bạn đã xóa thành công người dùng @Model.LastName")
+            }
+</script>
 
 <style>
 .Back-btn 

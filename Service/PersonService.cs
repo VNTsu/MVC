@@ -20,13 +20,15 @@ namespace MVC2.Service
 
         public void Delete(Person persons)
         {
-            var item = PersonData.Persons.Where(m => m.Id == persons.Id).FirstOrDefault();
+            var item = PersonData.Persons.FirstOrDefault(m => m.Id == persons.Id);
+            if (item != null){
             PersonData.Persons.Remove(item);
+            }
         }
 
         public void Edit(Person persons)
         {
-            var item = PersonData.Persons.Where(m => m.Id == persons.Id).FirstOrDefault();
+            var item = PersonData.Persons.FirstOrDefault(m => m.Id == persons.Id);
             if (item != null)
             {
                 item.FirtName = persons.FirtName;

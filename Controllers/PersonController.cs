@@ -1,9 +1,11 @@
+using System.Net;
 using System.Linq;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MVC2.Models;
 using MVC2.Service;
+using MVC2.Data;
 
 namespace MVC2.Controllers;
 
@@ -23,12 +25,6 @@ public class PersonController : Controller
         var item = _personservice.AllPerson().ToList();
         return View(item);
     }
-
-    public IActionResult Comfirm()
-    {
-        return View();
-    }
-
     
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
@@ -44,30 +40,36 @@ public class PersonController : Controller
     [HttpPost]
     public IActionResult Create(Person persons)
     {
-         {
-            
-                _personservice.Create(persons);
-            
+        {           
+            _personservice.Create(persons);            
             return RedirectToAction("Index");
         }
     }
 
     [HttpGet]
-    public IActionResult Delete()
+    public IActionResult Delete(int? id)
     {
-        return View();
+        var item = PersonData.Persons.FirstOrDefault(m => m.Id == id);
+        if (item == null){
+            return NotFound();
+        }
+        return View(item);
     }
     [HttpPost]
     public IActionResult Delete(Person persons)
     {
         _personservice.Delete(persons);
-        return RedirectToAction("Comfirm");
+        return RedirectToAction("Index");
     }
     
     [HttpGet]
-    public IActionResult Edit()
+    public IActionResult Edit(int? id)
     {
-        return View();
+        var item = PersonData.Persons.FirstOrDefault(m => m.Id == id);
+        if (item == null){
+            return NotFound();
+        }
+        return View(item);
     }
     [HttpPost]
     public IActionResult Edit(Person persons)

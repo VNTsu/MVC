@@ -8,7 +8,7 @@ namespace MVC2.Models
 {
     public class Person
     {
-        [DisplayNameAttribute("Ma Khach Hang")]
+        [DisplayNameAttribute("Mã Khách hàng")]
         public int Id { get; set; }  
         
         [DisplayNameAttribute("Tên")]         
@@ -23,17 +23,17 @@ namespace MVC2.Models
         [DisplayNameAttribute("Giới tính")] 
         public String Gender {get;set;}  
 // public Person (int inputID, String inputFirtName, String inputLastName, String inputCity, String inputGender){
-//           this.Id = inputID;
+//            this.Id = inputID;
 //            this.FirtName = inputFirtName;
 //            this.LastName = inputLastName;
 //            this.City = inputCity;
 //            this.Gender = inputGender;
 //        }
   }    
-    public enum Gender
-    {
-        male,
-        female,
-        other,
-    }
+//    public enum Gender
+//    {
+//        male,
+//        female,
+//        other,
+//    }
 }

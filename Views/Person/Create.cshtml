@@ -9,11 +9,13 @@
     <div class="form-group">
             <label for="FirtName">First Name: </label>
             <input type="text" class="form-control" id="FirtName" name="FirtName" />
+            <span asp-validation-for="FirtName" class="text-danger"></span>
         </div>
 
         <div class="form-group">
             <label for="LastName">Last Name: </label>
             <input type="text" class="form-control" id="LastName" name="LastName" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
         </div>
 
         <div class="form-group">
@@ -29,6 +31,7 @@
         <div class="form-group">
             <label for="City">City: </label>
             <input type="text" class="form-control" id="City" name="City" />
+            <span asp-validation-for="City" class="text-danger"></span>
         </div>
         <div>
             <input class="Create-btn" type="submit" value="Create"/>
