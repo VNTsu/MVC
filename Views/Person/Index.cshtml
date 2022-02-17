@@ -44,7 +44,7 @@
                 </td>
 
                  <td>
-                    @Html.DisplayFor(modelItem => item.FirtName)
+                    <a class="btn" href="@Url.Action("Detail","Person", new {id=@item.Id})">@item.FirtName</a>
                 </td>
 
                  <td>

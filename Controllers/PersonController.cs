@@ -77,4 +77,14 @@ public class PersonController : Controller
         _personservice.Edit(persons);
         return RedirectToAction("Index");
     }
+
+    [HttpGet]
+    public IActionResult Detail(int? id)
+    {
+        var item = PersonData.Persons.FirstOrDefault(m => m.Id == id);
+        if (item == null){
+            return NotFound();
+        }
+        return View(item);
+    }
 }

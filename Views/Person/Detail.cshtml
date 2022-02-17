@@ -1,0 +1,28 @@
+@model MVC2.Models.Person
+
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+<div>
+    <p class="h3">Detail</p>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2"><label for="FirtName">Firt Name: </label>  </dt>
+        <dd class="col-sm-10">@Model.FirtName</dd>
+        <dt class="col-sm-2"><label for="LastName">Last Name: </label>  </label></dt>
+        <dd class="col-sm-10">@Model.LastName</dd>
+        <dt class="col-sm-2"><label for="Gender">Gender: </label>  </label></dt>
+        <dd class="col-sm-10">@Model.Gender</dd>
+        <dt class="col-sm-2"><label for="City">City: </label>  </dt>
+        <dd class="col-sm-10">@Model.City</dd>
+    </dl>
+</div>
+
+<hr />
+
+<div>    
+    <a asp-action="Index" class="btn btn-sm btn-outline-secondary">Back to List</a>    
+    <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-sm btn-outline-danger">Delete</a>
+</div>

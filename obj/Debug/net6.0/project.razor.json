@@ -16343,6 +16343,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "e:\\Code Rookie\\MVC2\\Views\\Person\\Detail.cshtml",
+      "TargetPath": "Views\\Person\\Detail.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "e:\\Code Rookie\\MVC2\\Views\\Person\\Create.cshtml",
       "TargetPath": "Views\\Person\\Create.cshtml",
       "FileKind": "mvc"
